@@ -1,0 +1,52 @@
+
+Geradores de estruturas CRUD''s como o scaffold
+
+Passo1: instalar
+Passo2:
+Passo3:
+
+Passo4: Criação do Scaffold
+#criar, ler, atualizar e deletar recursos de uma aplicação
+utilizando um gerador que automatiza
+
+#rails generate scaffold tarefa titulo:string descricao:text status:string
+string gera html e text uma area de texto
+
+#Criou:
+1- dentro de app>controllers: tarefas_controller
+gera um controler que vai receber as requisições vindas da camada de visao
+e decidir quais regras de negócio vão ser executadas no modelo
+
+2- Dentro da pasta app>views: tarefas
+contem as paginas que vao ser renderizadas para o usuario
+index.html.erb - responsável pela listagem
+new.html.erb - novo registro
+show -mostra detalhes de um registro já criado
+form - é importada dentro de edit e new para que um cadastro nao se repita
+
+3- Dentro de app>models:
+Modelo chamado tarefa
+Faz a ligação com o banco de dados
+class Tarefa < ActiveRecord::Base
+end
+
+#Ir em index.html.erb
+diferença entre as tags <% e <%=
+<% conteudo aqui dentro nao é renderizado 
+<%= isso aqui é renderizado
+
+#Ir em tarefas_controller.rb
+-Controlador é uma classe
+-Cada método está relacionado a uma pagina
+Ex: metodo index esta relacionado com a pagina index
+-def show tá vazia
+before_action :set_tarefa, only: [:show, :edit, :update, :destroy]
+Antes do metodo set_tarefa, vai executar as outras da frente
+metodo set_tarefa: busca no banco de dados uma tarefa pelo seu identificador
+metodo new: @tarefa - instancia uma nova tarefa
+metodo create; recupera os parametros vindos de uma requisiscao e instancia um novo objeto tarefa
+respond_to é a resposta é com um html ou json
+
+#executar comando:
+rake db:migrate
+migra o que esta em tabela para banco de dados

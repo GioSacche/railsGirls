@@ -1,0 +1,66 @@
+https://www.youtube.com/watch?v=quLmIuIrIig
+
+0 - Escolha uma pasta e use git para controle de versoes
+
+1 - para criar uma aplicacção rails:
+rails new railsgirls
+
+ASSETS - jascript e css
+CONTROLERS - vao chamar os modelos
+MODELS - modelos
+VIEWS - paginas
+
+2 - para modificar em temo real 
+rails server
+
+3 - Abir no chrome 
+http://localhost:3000
+Nao criamos nenhuma pagina ainda pra aplicação
+
+4 - Criar pagina
+ONDE AS AÇÕES VAO ACONTECER
+rails g controller Pages about home contact
+Gera 3 vviews conectadas> home & about & contact
+routes.rb foi atualizado
+
+5 - alterar routes.rb
+root 'pages#home'
+#set the index page / root url
+
+6 - Abrir novamente o localhost 3000
+Agora podemos atualizar em tempo real!
+
+7 - Alterar html
+app>pages>home.html
+Alterar o que ta escrito, salvar e ver alteraçao
+
+8 - Ir para o site start Bootstrap
+Fazer download do template
+
+9 - Transferir coisas do bootstrap
+meu projeto: app> assets> stylesheets
+colocar aqui os arquvos css
+
+app> assets> javascripts
+colocar aqui os arquivos da pasta js do bootstrap
+
+copiar arquivo html.index do bootstrap e colocar em 
+"homepage.html"
+
+10 - Arrumar o que está de errado no html
+Imagem: procurar por img e path
+Onde tiver source da img acrescentar "assests" antes porque é a pasta do seu projeto
+
+11 - Arrumar ainda mais digitando
+grep -r "profile.png" 
+vai aparecer todos os lugares que tem a imgaem
+ir no arquivo javascript e modificar caminho da imagem
+
+12 - Ir em https://stackoverflow.com/questions/11052398/rails-using-font-awesome 
+copiar config.assets.paths << Rails.root.join("app", "assets", "fonts")
+config>locales>application.rb
+colar 
+
+13 - Ir em app>assets
+Criar uma pasta chamada fonts
+
