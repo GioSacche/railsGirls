@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+
+<h2 class="text-center text-uppercase text-secondary mb-0"><%= @servico.Titulo %></h2>
+
+<p>
+  <strong>Descricao:</strong>
+  <%= @servico.Descricao %>
+</p>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @servico.Nome %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @servico.Status %>
+</p>
+
+<%= link_to 'Edit', edit_servico_path(@servico) %> |
+<%= link_to 'Back', servicos_path %>

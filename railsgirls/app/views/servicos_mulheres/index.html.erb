@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Servicos Mulheres</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Titulo</th>
+      <th>Descricao</th>
+      <th>Nome</th>
+      <th>Status</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @servicos_mulheres.each do |servicos_mulhere| %>
+      <tr>
+        <td><%= servicos_mulhere.Titulo %></td>
+        <td><%= servicos_mulhere.Descricao %></td>
+        <td><%= servicos_mulhere.Nome %></td>
+        <td><%= servicos_mulhere.Status %></td>
+        <td><%= link_to 'Show', servicos_mulhere %></td>
+        <td><%= link_to 'Edit', edit_servicos_mulhere_path(servicos_mulhere) %></td>
+        <td><%= link_to 'Destroy', servicos_mulhere, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Servicos mulhere', new_servicos_mulhere_path %>

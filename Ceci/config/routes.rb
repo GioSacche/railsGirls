@@ -1,17 +1,8 @@
 Rails.application.routes.draw do
+  resources :servicos
 
-  resources :servicos_mulheres
-
-  #set the index page / root url
-
-  root 'pages#home'
-
-  get 'pages/about'
-
-  get 'pages/home'
-
-  get 'pages/contact'
-
+  get "welcome/homepage"
+  root "welcome#homepage"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
